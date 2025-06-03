@@ -67,6 +67,7 @@ class CogVideoXPatchEmbed(nn.Module):
             post_time_compression_frames,
             self.spatial_interpolation_scale,
             self.temporal_interpolation_scale,
+            output_type='pt',
         )
         pos_embedding = pos_embedding.flatten(0, 1) # torch.from_numpy(pos_embedding).flatten(0, 1)
         joint_pos_embedding = torch.zeros(
